@@ -1,0 +1,27 @@
+/*Estructura de contenido de raiz */
+.contenido_raiz{   
+    width: 100%;
+}
+/*Contenido de contenido de raiz   */
+.contenidos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+     justify-content:center;
+     text-align: center;
+}
+/* los div dentro de conteniodos de contrnido de raiz  */
+.buscar_articulos_caja{
+  background-color: white;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 15px;
+  width: 30%;
+}
+/* select y articulos  */
+section{
+   display: flex;
+}
+section > article {
+    padding: 5px;
+}

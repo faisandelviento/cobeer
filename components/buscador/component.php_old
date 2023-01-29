@@ -1,0 +1,9 @@
+<style>
+<?php include __DIR__ . '/template.css';
+?>
+</style>
+
+<form method="GET" action="http://www.google.com/search" target="_blank" class="buscadorForm">
+    <input type="search" placeholder="Busca un article" class="busqueda" />
+    <input id="enviar" type="submit" value=">">
+</form>

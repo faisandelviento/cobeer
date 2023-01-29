@@ -1,0 +1,35 @@
+.login {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    color: black;
+
+}
+
+.login h1 {
+    padding: 10px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.login .usuario {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.login button {
+    width: 40%;
+    transition: 1s;
+}
+
+.login button:hover {
+    /* font-size:20px */
+    width: 20%;
+}

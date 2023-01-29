@@ -1,0 +1,75 @@
+.tituloMapa{
+    text-align: center;
+    font-size: 14px;
+    background-color: #C79D1E;
+    padding: 2vh;
+	margin-top: 5vh;
+    width: 100vw;
+    margin-bottom: 3vh;
+}
+
+.mapa {
+	display: flex;
+	justify-content:center;
+	z-index:3;
+	position: relative;
+	background-color: #C79D1E;
+	margin: 0 5vw 0 5vw;
+	padding: 3vh 0 3vh 0;
+}
+
+.trigo{
+	position:absolute;
+	display:none;
+	background-color:red;
+	left: 100px;
+}
+
+.step {
+	opacity:0;
+	position:absolute;
+}
+.step p{
+	width:300px;
+}
+
+#step1 {
+	top:50%;
+	left:10%;
+}
+#step2 {
+	top:50%;
+	left:10%;
+}
+#step3 {
+	top:50%;
+	left:10%;
+}
+#step4 {
+	top:50%;
+	left:10%;
+}
+#step5 {
+	top:50%;
+	left:10%;
+}
+#step6 {
+	top:15%;
+	left:65%;
+}
+#step7 {
+	top:15%;
+	left:65%;
+}
+#step8 {
+	top:15%;
+	left:65%;
+}
+#step9 {
+	top:15%;
+	left:65%;
+}
+#step10 {
+	top:15%;
+	left:65%;
+}

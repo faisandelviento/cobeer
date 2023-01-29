@@ -1,0 +1,18 @@
+
+////////////USAGE//////////////
+
+//Select
+$objectDB = new Object(array("id" => 1, "nombre" => "Juan"));
+$object = $objectDB->list();
+
+//Insert
+$objectDB = new Object(array("nombre" => "Pepe", "apellidos" => "López Morales", "correo" => "morales@gmail.com", "pass" => "pepe123"));
+$object = $objectDB->insert();
+
+//Update
+$objectDB = new Object(array("id" => 1, "nombre" => "Rodrigo"));
+$object = $objectDB->update();
+        
+//Delete
+$objectDB = new Object(array("id" => 1));
+$object = $objectDB->delete();

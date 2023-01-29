@@ -1,0 +1,40 @@
+#enviar{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ffa74c;
+    background-color:#ffa74c;
+}
+#contraseña{
+    color: blue;;
+}
+
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.loginFormContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginFormInputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.loginFormInput{
+    border-radius: 2px;
+    border: 2px #ccc solid;
+    background-color:#FFFAF1;
+}

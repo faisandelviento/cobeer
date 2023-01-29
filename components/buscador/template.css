@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;500;600&display=swap');
+
+
+.search {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 10px;
+    transition-duration: 500ms;
+    cursor: pointer;
+    font-family: Catamaran;
+    font-size: 15px;
+    border: 1px solid black;
+    overflow: hidden;
+    background-image: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-search-512.png");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 45% 50%;
+
+}
+
+.search:hover {
+    border: 1px solid black;
+}
+
+.search:focus {
+    border-radius: 0%;
+
+    width: 300px;
+    cursor: text;
+    padding-left: 50px;
+    color: black;
+    outline: none;
+    border: 1px solid black;
+    background-image: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-search-512.png") no-repeat;
+    background-size: 30px;
+    background-position: 5px 50%;
+}

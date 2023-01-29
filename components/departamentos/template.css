@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;500;600&display=swap');
+
+.tituloDepartaments{
+    text-align: center;
+    font-size: 14px;
+    background-color: #C79D1E;
+    padding: 2vh;
+    width: 100vw;
+    margin-bottom: 3vh;
+}
+
+.imagenesDepartamentos {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex: wrap;
+    align-items: center;
+    justify-content: center;
+    /* gap: 40px; */
+    /* width: 50%; */
+}
+
+.imagenesDepartamentos div {
+    width: 100%;
+    /* object-fit: cover; */
+    background-color: #E0B122;
+    transition: 1s;
+    display: flex;
+    flex: wrap;
+    align-items: center;
+    justify-content: flex-start;
+
+
+}
+
+.descripcionDept {
+    color: #E0B122;
+    font-family: Catamaran;
+    font-size: 14px;
+}
+
+
+.line-1 {
+    position: relative;
+    top: 10%;
+    width: 3em;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+    font-size: 2.5em;
+    font-family: Catamaran;
+
+}
+
+/* Animation */
+.anim-typewriter {
+    animation: typewriter 1s steps(44) 1s 1 normal both,
+        blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 11em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.imagenesDepartamentos .tituloDept {
+
+    font-size: 2.5em;
+    margin: 25px;
+
+    color: #E0B122;
+    font-family: Catamaran;
+
+}
+
+.imageDepart {
+    width: 50%;
+    opacity: 0.3;
+    object-fit: contain;
+
+    transition: 1s;
+
+}
+
+
+
+.imagenesDepartamentos div:hover {
+    width: 100%;
+    background-color: white;
+    /* background-size: cover; */
+    transition: 1s;
+    display: block;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+
+}
+
+
+
+.imageDepart:hover {
+    width: 50%;
+    opacity: 1;
+    transition: 0.5s;
+
+
+}

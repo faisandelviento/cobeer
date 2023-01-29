@@ -1,0 +1,33 @@
+.titulo {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    gap: 16px;
+
+    justify-content: center;
+    align-items: center;
+}
+.crearArticulo {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    gap: 16px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+.foto {
+    background-color: red;
+    border-style: solid;
+    display: flex;
+    height: 100%;
+
+}
+
+.texto {
+    background-color: green;
+    border-style: solid;
+    height: 100%;
+}

@@ -1,0 +1,201 @@
+/* gama de colores: 
+
+#E6D587
+#D4942A
+#DB8300
+#EBB96B
+#96580C
+
+*/
+
+/* Progress bar */
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.pace-inactive {
+  display: none;
+}
+.pace .pace-progress {
+  background: #96580c;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
+
+/* fonts */
+@font-face {
+  font-family: eugusto;
+  src: url("../../assets/fonts/Eugusto.otf");
+}
+
+@font-face {
+  font-family: lilitaOne;
+  src: url("../../assets/fonts/LilitaOne.ttf");
+}
+
+@import "cssreset.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap");
+
+body,
+html {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  /* background-color: #fff4c2; */
+  background-color: #f2c025;
+}
+
+/* Page global styles */
+
+input {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer !important;
+}
+
+h1 {
+  font-family: eugusto;
+  color: #333;
+}
+
+h3 {
+  color: #333;
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: lilitaOne;
+}
+
+h2 {
+  font-family: eugusto;
+  color: #fff;
+  font-size: 5rem;
+}
+
+@media (max-width: 1200px) {
+  h1,
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 800px) {
+  h1,
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+.centeredContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageTitleContainer {
+  width: 100%;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  align-items: center;
+  padding: 50px;
+}
+
+/* defaultCard */
+
+.defaultCardContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #fffddd;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  gap: 10px;
+  width: 100%;
+  flex-basis: 25%;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.defaultCardContainer:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1200px) {
+  .defaultCardContainer {
+    flex-basis: 40%;
+  }
+}
+
+@media (max-width: 800px) {
+  .defaultCardContainer {
+    flex-basis: 100%;
+  }
+}
+
+.defaultCardText {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.defaultCardTitle {
+  color: #333;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.defaultCardDescription {
+  color: #666;
+  font-size: medium;
+}
+
+.defaultCardImage {
+  background-image: url("https://picsum.photos/700/700");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+/* Page title */
+.opacityContainer {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.pageTitleCardContainer {
+  background-image: url("https://picsum.photos/1000/500");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.pageTitleCardText {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: white;
+}

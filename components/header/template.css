@@ -1,0 +1,335 @@
+.headerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.watermark1 {
+  position: fixed;
+  color: #ffa74c;
+  font-style: italic;
+  font-size: 35px;
+  top: 4vh;
+  right: 5vw;
+  z-index: 3;
+}
+
+.cobeerLogo {
+  z-index: 500;
+}
+
+.cobeerLogo img {
+  height: 100px !important;
+  z-index: 999;
+  padding: 0 !important;
+}
+
+/* BURBUJAS DEL HEADER */
+.beer-foam {
+  bottom: 10px;
+  height: 180px;
+}
+
+.foam {
+  float: left;
+  position: absolute;
+  z-index: 300;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: #fefefe;
+  /* box-shadow: 0px 2px 1px #C79D1E */
+}
+
+.foam-1 {
+  top: 12vh;
+  left: -2vw;
+}
+
+.foam-2 {
+  top: 14vh;
+  left: 1vw;
+}
+
+.foam-3 {
+  top: 13vh;
+  left: 4vw;
+}
+
+.foam-4 {
+  top: 11vh;
+  left: 7vw;
+}
+
+.foam-5 {
+  top: 12vh;
+  left: 10vw;
+}
+
+.foam-6 {
+  top: 14vh;
+  left: 13vw;
+}
+
+.foam-7 {
+  top: 13vh;
+  left: 16vw;
+}
+
+.foam-8 {
+  top: 11vh;
+  left: 19vw;
+}
+
+.foam-9 {
+  top: 12vh;
+  left: 22vw;
+}
+
+.foam-10 {
+  top: 14vh;
+  left: 25vw;
+}
+
+.foam-11 {
+  top: 13vh;
+  left: 28vw;
+}
+
+.foam-12 {
+  top: 11vh;
+  left: 31vw;
+}
+
+.foam-13 {
+  top: 12vh;
+  left: 33vw;
+}
+
+.foam-14 {
+  top: 14vh;
+  left: 36vw;
+}
+
+.foam-15 {
+  top: 13vh;
+  left: 39vw;
+}
+
+.foam-16 {
+  top: 11vh;
+  left: 42vw;
+}
+
+.foam-17 {
+  top: 12vh;
+  left: 45vw;
+}
+
+.foam-18 {
+  top: 14vh;
+  left: 48vw;
+}
+
+.foam-19 {
+  top: 13vh;
+  left: 51vw;
+}
+
+.foam-20 {
+  top: 11vh;
+  left: 54vw;
+}
+
+.foam-21 {
+  top: 12vh;
+  left: 57vw;
+}
+
+.foam-22 {
+  top: 14vh;
+  left: 60vw;
+}
+
+.foam-23 {
+  top: 13vh;
+  left: 63vw;
+}
+
+.foam-24 {
+  top: 11vh;
+  left: 66vw;
+}
+
+.foam-25 {
+  top: 11vh;
+  left: 69vw;
+}
+
+.foam-26 {
+  top: 11vh;
+  left: 72vw;
+}
+
+.foam-27 {
+  top: 12vh;
+  left: 75vw;
+}
+
+.foam-28 {
+  top: 14vh;
+  left: 78vw;
+}
+
+.foam-29 {
+  top: 13vh;
+  left: 81vw;
+}
+
+.foam-30 {
+  top: 11vh;
+  left: 84vw;
+}
+
+.foam-31 {
+  top: 12vh;
+  left: 87vw;
+}
+
+.foam-32 {
+  top: 14vh;
+  left: 90vw;
+}
+
+.foam-33 {
+  top: 13vh;
+  left: 93vw;
+}
+
+.foam-34 {
+  top: 11vh;
+  left: 96vw;
+}
+
+.liquid .bubble {
+  position: fixed;
+  animation-name: bubble;
+  animation-iteration-count: 3;
+  animation-timing-function: linear;
+  /* animation-fill-mode: forwards; */
+  background-color: #fff;
+  bottom: -20px;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+}
+
+@keyframes bubble {
+  0% {
+    bottom: 0;
+  }
+
+  50% {
+    background-color: #fff;
+    bottom: 150px;
+  }
+
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+    bottom: 500px;
+  }
+}
+
+/* BURBUJAS */
+.bubble1 {
+  left: 10px;
+  animation-delay: 1000ms;
+  animation-duration: 1000ms;
+}
+
+.bubble2 {
+  left: 100px;
+  animation-delay: 700ms;
+  animation-duration: 1100ms;
+}
+
+.bubble3 {
+  left: 200px;
+  animation-delay: 1200ms;
+  animation-duration: 1300ms;
+}
+
+.bubble4 {
+  left: 300px;
+  animation-delay: 1100ms;
+  animation-duration: 700ms;
+}
+
+.bubble5 {
+  left: 400px;
+  animation-delay: 1300ms;
+  animation-duration: 800ms;
+}
+
+.bubble6 {
+  right: 10px;
+  animation-delay: 1000ms;
+  animation-duration: 1000ms;
+}
+
+.bubble7 {
+  right: 100px;
+  animation-delay: 700ms;
+  animation-duration: 1100ms;
+}
+
+.bubble8 {
+  right: 200px;
+  animation-delay: 1200ms;
+  animation-duration: 1300ms;
+}
+
+.bubble9 {
+  right: 300px;
+  animation-delay: 1100ms;
+  animation-duration: 700ms;
+}
+
+.bubble10 {
+  right: 450px;
+  animation-delay: 1300ms;
+  animation-duration: 800ms;
+}
+
+.bubble11 {
+  right: 460px;
+  animation-delay: 1000ms;
+  animation-duration: 1000ms;
+}
+
+.bubble12 {
+  right: 530px;
+  animation-delay: 700ms;
+  animation-duration: 1100ms;
+}
+
+.bubble13 {
+  right: 600px;
+  animation-delay: 1200ms;
+  animation-duration: 1300ms;
+}
+
+.bubble14 {
+  right: 640px;
+  animation-delay: 1100ms;
+  animation-duration: 700ms;
+}
+
+.bubble15 {
+  right: 700px;
+  animation-delay: 1300ms;
+  animation-duration: 800ms;
+}
