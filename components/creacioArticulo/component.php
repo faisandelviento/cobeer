@@ -1,19 +1,51 @@
-<style> <?php include __DIR__.'/template.css'; ?> </style>
-<div class="crearArticulo">
-    <div class="foto">
-        <form">
-            <input type="file" id="myFile" name="imgCrearArticulo">
-            <input type="submit">
-        </form>
-        <img src=«mifoto.php» />
-    </div>
-    <div class="texto">
-        <form">
-            Titulo del artículo: <input type="text" name="tituloArti"><br>
-            <textarea id="noticia" name="noticia" rows="20" cols="50"></textarea>
-            <br>
-            Tag al que asociar: <input type="text" name="nombreTag"><br>
-            <input type="submit" value="Guardar">
-        </for,>
-    </div>
+<style>
+    <?php include __DIR__ . '/template.css'; ?>
+</style>
+<div class="creacioArticulo">
+    <h1>CREACIÓ D'ARTICLES</h1>
+    <form action="#" method="post" id="form">
+        <div id="part1" class="part-form-top">
+            <label for="titulo">Introduïu el títol de l'Articulo: </label> <br/>
+            <input type="text" name="name" id="name" class="name" required />
+            <div class="button" onclick="animation()">
+                <a href="#part2">SEGÜENT</a>
+            </div>
+        </div>
+        <div id="part2" class="part-form reveal">
+            <label for="mail">Introduïu la Tag: </label> <br />
+            <input list="tags" name="tag" id="tag">
+            <datalist id="tags">
+                <option value="Departamento1">
+                <option value="Departamento2">
+                <option value="Departamento3">
+                <option value="Departamento4">
+                <option value="Departmento5">
+            </datalist>
+            <div class="button">
+                <a href="#part1">TORNAR</a>
+                <a href="#part3">SEGÜENT</a>
+            </div>
+        </div>
+        <div id="part3" class="part-form reveal">
+            <label for="image">Tens una foto per a l'article?</label> <br />
+            <input type="file" accept="image/*" name="image" id="file" class="image">
+            <label for="file" class="file">UPLOAD</label>
+            <div class="button">
+                <a href="#part2">TORNAR</a>
+                <a href="#part4">SEGÜENT</a>
+            </div>
+        </div>
+        <div id="part4" class="part-form reveal">
+            <label for="descripcion">Introduïu el contingut de l'article:</label>
+            <br />
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
+            <div class="button">
+                <a href="#part3">TORNAR</a>
+                <div class="button-submit">
+                    <input type="submit" name="enviar" value="SUBMIT" />
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
+<script src="./script.js"></script>
