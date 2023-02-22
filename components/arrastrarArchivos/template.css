@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Helvetica Neue",Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+.areaArrastre{
+    border: 5px dashed #ddd;
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* Para arrastrar el archivo y soltarlo encima  */
+.areaArrastre.active{
+    background-color: #b8d4fe;
+    color: black;
+    border: 2px dashed #618ac9;
+}
+.areaArrastre h2{
+    font-size: 30px;
+    color:#000;
+    font-weight: 500;
+}
+.areaArrastre span{
+    font-size: 25px;
+    color:#000;
+    font-weight: 500;
+}
+.areaArrastre button{
+    padding: 10px 25px;
+    font-size: 20px;
+    border: 0;
+    outline:  none;
+    background-color: #5256ad;
+    color:white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+}
+/* Se crea de forma dinamica */
+.file-container {
+    display: flex;
+    align-items: center;
+    gap:10px;
+    padding: 10px;
+    border:solid 1px #ddd;
+}
+#viewArrastre{
+    margin-top: 10px;
+}
+.status-text{
+    padding: 0 10px;
+}
+.success{
+    color:green;
+}
+.failure{
+    color:red;
+}
