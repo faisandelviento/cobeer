@@ -1,3 +1,9 @@
+<style>
+<?php include __DIR__ . '/template.css';
+?>
+</style>
+<?php include __DIR__ . '/controller.php'; ?>
+
 <div class="defaultCardContainer">
     <div class="defaultCardImage">
     </div>
