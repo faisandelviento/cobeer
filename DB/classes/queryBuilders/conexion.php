@@ -3,7 +3,7 @@
 $dbhost = '';
 $dbuser = 'root';
 $dbpass = '';
-$dbname = '';
+$dbname = 'cobeer';
 $dbh = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 if ($dbh->connect_error) {
     // echo "Error de Connexion ($dbh->connect_errno)
