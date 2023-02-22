@@ -37,7 +37,7 @@ titulo varchar(50) not null,
 descripcion varchar(255), 
 autor varchar(50),
 texto text(1500), -- Revisar si el tamaño es adecuado
-FechaDeCreacion datetime,
+fechaDeCreacion datetime,
 idDep int unsigned not null,
 tags varchar(255), -- Comma-separated values
 indBaja bit default 0,

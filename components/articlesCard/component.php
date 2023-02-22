@@ -1,16 +1,12 @@
 <style>
-<?php include __DIR__ . '/template.css';
-?>
+    <?php include __DIR__ . '/template.css';
+    ?>
 </style>
+<?php include __DIR__ . '/controller.php'; ?>
 
 <div class="tituloArtDest">
     <h1>Articles destacats</h1>
 </div>
 <div class="articlesCardContainer">
-    <?php include dirname(__DIR__, 1) . '\articleCard\component.php' ?>
-    <?php include dirname(__DIR__, 1) . '\articleCard\component.php' ?>
-    <?php include dirname(__DIR__, 1) . '\articleCard\component.php' ?>
-    <?php include dirname(__DIR__, 1) . '\articleCard\component.php' ?>
-    <?php include dirname(__DIR__, 1) . '\articleCard\component.php' ?>
-    <?php include dirname(__DIR__, 1) . '\articleCard\component.php' ?>
+    <?php //getArticulos() ?>
 </div>
