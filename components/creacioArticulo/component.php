@@ -1,11 +1,14 @@
+<?php include __DIR__ . '/controller.php'; ?>
 <style>
-    <?php include __DIR__ . '/template.css'; ?>
+<?php include __DIR__ . '/template.css';
+?>
 </style>
+
 <div class="creacioArticulo">
     <h1>CREACIÓ D'ARTICLES</h1>
-    <form action="#" method="post" id="form">
+    <form action="#" method="post" id="form" enctype="multipart/form-data">
         <div id="part1" class="part-form-top">
-            <label for="titulo">Introduïu el títol de l'Articulo: </label> <br/>
+            <label for="titulo">Introduïu el títol de l'Articulo: </label> <br />
             <input type="text" name="name" id="name" class="name" required />
             <div class="button" onclick="animation()">
                 <a href="#part2">SEGÜENT</a>
@@ -48,4 +51,3 @@
         </div>
     </form>
 </div>
-<!-- <script src="./script.js"></script> -->
