@@ -28,8 +28,8 @@
         </div>
         <div id="part3" class="part-form reveal">
             <label for="image">Tens una foto per a l'article?</label> <br />
-            <input type="file" accept="image/*" name="image" id="file" class="image">
-            <label for="file" class="file">UPLOAD</label>
+            <!-- Componente ArrastrarArchivos -->
+            <?php include '../../../components/arrastrarArchivos/component.php' ?>
             <div class="button">
                 <a href="#part2">TORNAR</a>
                 <a href="#part4">SEGÜENT</a>
@@ -48,4 +48,4 @@
         </div>
     </form>
 </div>
-<script src="./script.js"></script>
+<!-- <script src="./script.js"></script> -->
