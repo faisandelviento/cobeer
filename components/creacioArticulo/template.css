@@ -45,7 +45,7 @@ html {
   animation-fill-mode: forwards;
 }
 
-/* .reveal {
+.reveal {
   position: relative;
   opacity: 0;
   transition: all 2s ease;
@@ -53,11 +53,11 @@ html {
 
 .reveal.active {
   opacity: 1;
-} */
+}
 
 /****** PRIMERA PARTE DEL FORMULARIO ******/
 .part-form-top label {
-  font-size: 2em;
+  font-size: 3em;
   margin-bottom: 10px;
   line-height: 2.5em;
   font-weight: 700;
@@ -144,7 +144,7 @@ html {
 /****** GRUPO DE BOTONES ******/
 .part-form .button {
   display: flex;
-  height: 30%;
+  height: 10%;
   width: 60%;
   align-items: center;
   justify-content: space-between;
@@ -199,7 +199,11 @@ html {
   margin-bottom: 10px;
   background-color: #ffffff;
   border: 1px solid #cccccc;
+<<<<<<< HEAD
   min-height: 200px;
+=======
+  min-height: 5vw;
+>>>>>>> 63f42d0287c2cc5dfc49f99cc4c08a0fc19d202b
   color: #1e1f24;
   font-size: 18px;
   line-height: 22px;
@@ -230,13 +234,26 @@ html {
   color: #121212;
 }
 
+/*PlaceHolder*/
+::placeholder {
+  color: #000;
+  opacity: 0.3;
+}
+
 /****** ANIMACIONES ******/
 @keyframes fadeInRight {
   0% {
     transform: translate(-100vw, 0vw);
   }
+<<<<<<< HEAD
 
   100% {
     transform: translate(0vw, 0vw);
   }
 }
+=======
+  100% {
+    transform: translate(0vw, 0vw);
+  }
+}
+>>>>>>> 63f42d0287c2cc5dfc49f99cc4c08a0fc19d202b

@@ -18,24 +18,24 @@
             </div>
         </div>
         <div id="part2" class="part-form reveal">
-            <label for="mail">Introduïu la Tag: </label> <br />
-            <input list="tags" name="tag" id="tag">
-            <datalist id="tags">
-                <option value="Departamento1">
-                <option value="Departamento2">
-                <option value="Departamento3">
-                <option value="Departamento4">
-                <option value="Departmento5">
-            </datalist>
+            <label for="mail">Introduïu el responsable: </label> <br />
+            <input type="text" name="autor" id="autor" class="autor" required />
             <div class="button">
-                <a href="#part1">TORNAR</a>
+                <a href="#header">TORNAR</a>
                 <a href="#part3">SEGÜENT</a>
             </div>
         </div>
         <div id="part3" class="part-form reveal">
-            <label for="image">Tens una foto per a l'article?</label> <br />
-            <!-- Componente ArrastrarArchivos -->
-            <?php include '../../../components/arrastrarArchivos/component.php' ?>
+            <label for="descripcion">Introduïu el departament:</label>
+            <br />
+            <input list="departamentos" name="departamento" id="departamento">
+            <datalist id="departamentos">
+                <option value="Departamento1">
+                <option value="Departamento2">
+                <option value="Departamento3">
+                <option value="Departamento4">
+                <option value="Departamento5">
+            </datalist>
             <div class="button">
                 <a href="#part2">TORNAR</a>
                 <a href="#part4">SEGÜENT</a>
@@ -44,9 +44,38 @@
         <div id="part4" class="part-form reveal">
             <label for="descripcion">Introduïu el contingut de l'article:</label>
             <br />
-            <textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" required></textarea>
             <div class="button">
                 <a href="#part3">TORNAR</a>
+                <a href="#part5">SEGÜENT</a>
+            </div>
+        </div>
+        <div id="part5" class="part-form reveal">
+            <label for="resumen">Introduïu un resumen: </label> <br />
+            <textarea name="resumen" id="resumen" maxlength="150"></textarea>
+            <div>
+                <h6>*No es obligatorio</h6>
+            </div>
+            <div class="button">
+                <a href="#part4">TORNAR</a>
+                <a href="#part6">SEGÜENT</a>
+            </div>
+        </div>
+        <div id="part6" class="part-form reveal">
+            <label for="tag">Introduïu el Tag o els Tags: </label> <br />
+            <input type="text" name="tag" id="tag" class="tag" placeholder="Ejemplo: #estoesguay,#estomolamas"
+                required />
+            <div class="button">
+                <a href="#part5">TORNAR</a>
+                <a href="#part7">SEGÜENT</a>
+            </div>
+        </div>
+        <div id="part7" class="part-form reveal">
+            <label for="image">Tens una foto per a l'article?</label> <br />
+            <!-- Componente ArrastrarArchivos -->
+            <?php include '../../../components/arrastrarArchivos/component.php' ?>
+            <div class="button">
+                <a href="#part6">TORNAR</a>
                 <div class="button-submit">
                     <input type="submit" name="enviar" value="SUBMIT" />
                 </div>
@@ -54,3 +83,6 @@
         </div>
     </form>
 </div>
+<script>
+    <?php include __DIR__ . '/script.js'; ?>
+</script>

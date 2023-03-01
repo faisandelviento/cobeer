@@ -7,7 +7,7 @@
 }
 #areaArrastre{
     border: 5px dashed #ddd;
-    height: 30vw;
+    height: 20vw;
     width: 700px;
     border-radius: 5px;
     display: flex;
