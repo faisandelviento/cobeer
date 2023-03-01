@@ -12,7 +12,7 @@
 <body>
 
     <!--Header para el logo, menu y titulo de pagina-->
-    <header>
+    <header id="header">
         <?php include '../../../components/header/component.php' ?>
     </header>
 
