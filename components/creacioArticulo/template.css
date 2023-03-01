@@ -2,6 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
+.errores {
+  color: red;
+}
+
 .creacioArticulo {
   background-color: #f2c025;
   margin: 0;
@@ -172,33 +178,33 @@ html {
 }
 
 /******* INPUT *********/
-.image{
-    display: none;
+.image {
+  display: none;
 }
 
 .part-form .file {
-    width: 70%;
-    height: 30%;
-    background-color: #cccccc;
+  width: 70%;
+  height: 30%;
+  background-color: #cccccc;
 }
 
 /****** DESCRIPCION ******/
 .part-form textarea {
-    box-sizing: border-box;
-    margin: 0;
-    overflow: auto;
-    display: block;
-    width: 80%;
-    padding: 8px 12px;
-    margin-bottom: 10px;
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-    min-height: 200px;
-    color: #1e1f24;
-    font-size: 18px;
-    line-height: 22px;
-    height: auto;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  overflow: auto;
+  display: block;
+  width: 80%;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  min-height: 200px;
+  color: #1e1f24;
+  font-size: 18px;
+  line-height: 22px;
+  height: auto;
+}
 
 /****** BOTON DE SUBMIT ******/
 .part-form .button .button-submit input {
@@ -226,10 +232,11 @@ html {
 
 /****** ANIMACIONES ******/
 @keyframes fadeInRight {
-    0% {
-      transform: translate(-100vw, 0vw);
-    }
-    100% {
-      transform: translate(0vw, 0vw);
-    }
+  0% {
+    transform: translate(-100vw, 0vw);
   }
+
+  100% {
+    transform: translate(0vw, 0vw);
+  }
+}

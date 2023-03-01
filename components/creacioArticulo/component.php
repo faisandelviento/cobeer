@@ -1,10 +1,13 @@
 <?php include __DIR__ . '/controller.php'; ?>
 <style>
-<?php include __DIR__ . '/template.css';
-?>
+    <?php include __DIR__ . '/template.css';
+    ?>
 </style>
 
 <div class="creacioArticulo">
+    <h3 class="errores">
+        <?= $errores ?>
+    </h3>
     <h1>CREACIÓ D'ARTICLES</h1>
     <form action="#" method="post" id="form" enctype="multipart/form-data">
         <div id="part1" class="part-form-top">
