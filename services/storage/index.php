@@ -25,7 +25,7 @@ function storeFile($file)
         }
 
         // Check file size 5mb
-        if ($file["size"][$key] > 100) {
+        if ($file["size"][$key] > 5000000) {
             $error .= "- Fitxer : Ho sentim, el fitxer és massa gran. <br>";
         }
 
@@ -34,6 +34,8 @@ function storeFile($file)
         $extension = strtolower(pathinfo($file_target, PATHINFO_EXTENSION));
         if (!in_array($extension, $allowed_extensions)) {
             $error .= "- Ho sentim, només s'admeten fitxers JPG, JPEG, PNG i GIF. <br>";
+
+
 
         }
 
