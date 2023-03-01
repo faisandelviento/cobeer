@@ -13,6 +13,11 @@ class Articulo
     {
         return $this->SimpleQuery->list();
     }
+
+    // function listWith()
+    // {
+    //     return $this->SimpleQuery->list();
+    // }
     function insert()
     {
         return $this->SimpleQuery->insert();
