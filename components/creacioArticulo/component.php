@@ -6,7 +6,7 @@
 
 <div class="creacioArticulo">
     <h3 class="errores">
-        <?= $errores ?>
+        <?= $errores ?? null ?>
     </h3>
     <h1>CREACIÓ D'ARTICLES</h1>
     <form action="#" method="post" id="form" enctype="multipart/form-data">
