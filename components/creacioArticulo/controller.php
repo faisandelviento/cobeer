@@ -1,5 +1,7 @@
 <?php
 include __DIR__ . '/../../DB/classes/Articulo.php';
+include __DIR__ . '/../../DB/classes/Recurso.php';
+
 include __DIR__ . '/../../DB/classes/Departamentos.php';
 include __DIR__ . '/../../services/storage/index.php';
 if (isset($_POST['enviar'])) {
@@ -30,7 +32,15 @@ if (isset($_POST['enviar'])) {
 
         $paths = storeFiles($_FILES["fileToUpload"], $articulo['id']);
         foreach ($paths as $path) {
-            echo $path;
+            // echo $path;
+            $recursoDB = new Recurso(
+                array(
+                    "url" => $path,
+                    "idArticulo" => $articulo['id']
+                )
+            );
+
+            $recurso = $recursoDB->insert();
             //indsert de los recursos
         }
 

@@ -1,11 +1,11 @@
 <?php
+include_once __DIR__ . '/queryBuilders/SimpleQuery.php';
 class Articulo
 {
     public $articulo;
 
     function __construct($articulo = array())
     {
-        include __DIR__ . '/queryBuilders/SimpleQuery.php';
         $this->SimpleQuery = new SimpleQuery($articulo, "articulo");
     }
 

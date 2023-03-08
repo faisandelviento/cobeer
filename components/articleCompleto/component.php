@@ -5,16 +5,24 @@
 <article class="post">
 
   <section class="awSlider">
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src=<div id="carousel">
-        <img src="../../assets/imagenes/imgp.jpg" alt="Imagen 1">
-        <img src="../../assets/imagenes/imgp.jpg" alt="Imagen 2">
-        <img src="../../assets/imagenes/imgp.jpg" alt="Imagen 3">
-        <img src="../../assets/imagenes/imgp.jpg" alt="Imagen 4">
-      </div>
-      <button id="prevBtn">Anterior</button>
-      <button id="nextBtn">Siguiente</button>
+  <div id="carousel" class="carousel">
+    <button class="arrow prev">⇦</button>
+    <div class="gallery">
+      <ul>
+        <li><img src="https://en.js.cx/carousel/1.png"></li>
+        <li><img src="https://en.js.cx/carousel/2.png"></li>
+        <li><img src="https://en.js.cx/carousel/3.png"></li>
+        <li><img src="https://en.js.cx/carousel/4.png"></li>
+        <li><img src="https://en.js.cx/carousel/5.png"></li>
+        <li><img src="https://en.js.cx/carousel/6.png"></li>
+        <li><img src="https://en.js.cx/carousel/7.png"></li>
+        <li><img src="https://en.js.cx/carousel/8.png"></li>
+        <li><img src="https://en.js.cx/carousel/9.png"></li>
+        <li><img src="https://en.js.cx/carousel/10.png"></li>
+      </ul>
+    </div>
+    <button class="arrow next">⇨</button>
+  </div>
   </section>
 
   <div class="post__container">
@@ -41,3 +49,38 @@
     </div>
   </div>
 </article>
+
+<script>
+      /* etiqueta las imágenes pra poder rastrearlas, solo por conveniencia */
+      let i = 1;
+    for(let li of carousel.querySelectorAll('li')) {
+      li.style.position = 'relative';
+      li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
+      i++;
+    }
+
+    /* configuración */
+    let width = 130; // ancho de las imágenes
+    let count = 3; // conteo de las imágenes visibles
+
+    let list = carousel.querySelector('ul');
+    let listElems = carousel.querySelectorAll('li');
+
+    let position = 0; // posición del desplazamiento del carrete
+
+    carousel.querySelector('.prev').onclick = function() {
+      // desplazamiento izquierdo
+      position += width * count;
+      // no podemos mover demasiado a la izquierda, se acaban las imágenes
+      position = Math.min(position, 0)
+      list.style.marginLeft = position + 'px';
+    };
+
+    carousel.querySelector('.next').onclick = function() {
+      // desplazamiento derecho
+      position -= width * count;
+      // solo se puede desplazar el carrete de imágenes (longitud total de la cinta - conteo visibles)
+      position = Math.max(position, -width * (listElems.length - count));
+      list.style.marginLeft = position + 'px';
+    };
+</script>
