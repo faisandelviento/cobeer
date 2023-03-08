@@ -1,18 +1,23 @@
 <?php
 include_once __DIR__ . '/queryBuilders/SimpleQuery.php';
-class Departamentos
+class Recurso
 {
-    public $departamento;
+    public $recurso;
 
-    function __construct($departamento = array())
+    function __construct($recurso = array())
     {
-        $this->SimpleQuery = new SimpleQuery($departamento, "departamento");
+        $this->SimpleQuery = new SimpleQuery($recurso, "recurso");
     }
 
     function list()
     {
         return $this->SimpleQuery->list();
     }
+
+    // function listWith()
+    // {
+    //     return $this->SimpleQuery->list();
+    // }
     function insert()
     {
         return $this->SimpleQuery->insert();

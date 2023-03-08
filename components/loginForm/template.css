@@ -4,8 +4,9 @@
 	height: 500px;
 	overflow: hidden;
 	border-radius: 10px;
-	box-shadow: 5px 20px 50px #000;
-	background: #ffa74c;
+    margin:auto;
+	background: transparent;
+	background-color: #C79D1E;
 }
 
 #chk{
@@ -15,6 +16,13 @@
 	position: relative;
 	width:100%;
 	height: 100%;
+	background-color: white;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .label-login{
@@ -22,23 +30,37 @@
 	font-size: 2.3em;
 	justify-content: center;
 	display: flex;
-	margin: 60px;
 	font-weight: bold;
 	cursor: pointer;
 	transition: .5s ease-in-out;
 }
+
 .input-login{
 	width: 60%;
-	height: 20px;
+	height: 40px;
 	background: #fff;
 	justify-content: center;
 	display: flex;
-	margin: 20px auto;
+	margin: 5px auto;
 	padding: 10px;
 	border: none;
 	outline: none;
 	border-radius: 5px;
 }
+
+.button-login{
+	width: 60%;
+	height: 20px;
+	background: #fff;
+	justify-content: center;
+	display: flex;
+	margin: 5px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
 .button-login {
 	width: 60%;
 	height: 40px;
@@ -58,23 +80,31 @@
 }
 
 .button-login:hover{
-	color: #fff;
-	background: #ffa74c;
+	color: #C79D1E;
+	background: #F2C025;
 }
+
 .login{
 	height: 460px;
 	background: #eee;
 	border-radius: 60% / 10%;
-	transform: translateY(-180px);
+	transform: translateY(-50px);
 	transition: .8s ease-in-out;
+	background: #F2C025;
 }
+
+.login:hover{
+	background-color: #C79D1E;
+}
+
 .login .label-login{
-	color: #ffa74c;
+	color: rgb(0, 0, 0);
 	transform: scale(.6);
+    margin-bottom: 10px;
 }
 
 #chk:checked ~ .login{
-	transform: translateY(-500px);
+	transform: translateY(-350px);
 }
 #chk:checked ~ .login .label-login{
 	transform: scale(1);	
