@@ -8,13 +8,39 @@ if (isset($_POST['enviar'])) {
             echo $path;
             //indsert de los recursos
         }
+        // storeFile($_FILES["fileToUpload"]);
+
+        $titulo = $_POST['name'];
+        $autor = $_POST['autor'];
+        $departamento = $_POST['departamento'];
+        $descripcion = $_POST['descripcion'];
+        $resumen = $_POST['resumen'];
+        $tags = $_POST['tag'];
+
+
+
+        $articuloDB = new Articulo(
+            array(
+                "titulo" => $titulo,
+                "autor" => $autor,
+                "descripcion" => $descripcion,
+                "texto" => $resumen,
+                "tags" => $tags
+            )
+        );
+
+        $articulo = $articuloDB->insert();
+
+
     } catch (Exception $e) {
 
         $errores = "Hay que revisar esos puntos : <br> " . $e->getMessage();
 
     }
     // $file = $_FILES['file'];
-    // $articuloDB = new Articulo(array());
-    // $articulo = $articuloDB->insert();
+
 }
+
+
+
 ?>
