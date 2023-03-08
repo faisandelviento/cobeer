@@ -26,16 +26,14 @@
             </div>
         </div>
         <div id="part3" class="part-form reveal">
-            <label for="descripcion">Introduïu el departament:</label>
+            <label for="descripcion">Escolliu el departament:</label>
             <br />
             <input list="departamentos" name="departamento" id="departamento">
-            <datalist id="departamentos">
-                <option value="1">Departamento1</option>
-                <option value="2">Departamento2</option>
-                <option value="3">Departamento3</option>
-                <option value="4">Departamento4</option>
-                <option value="5">Departamento5</option>
-            </datalist>
+            <datalist id="departamentos">                
+                <?php foreach(getArticulos() as $departamento => $idDepartamento):?>
+                    <option id="<?=$idDepartamento?>"><?=$departamento?></option>
+                <?php endforeach;?>
+            </datalist>            
             <div class="button">
                 <a href="#part2">TORNAR</a>
                 <a href="#part4">SEGÜENT</a>

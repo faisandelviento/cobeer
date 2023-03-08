@@ -1,5 +1,6 @@
 <?php
 include __DIR__ . '/../../DB/classes/Articulo.php';
+include __DIR__ . '/../../DB/classes/Departamentos.php';
 include __DIR__ . '/../../services/storage/index.php';
 if (isset($_POST['enviar'])) {
     try {
@@ -40,6 +41,18 @@ if (isset($_POST['enviar'])) {
     }
     // $file = $_FILES['file'];
 
+}
+
+function getArticulos():array
+{
+    $departamentosDB = new Departamentos();
+    $departamentos = $departamentosDB->list();
+    $selectDepartamentos = [];
+    foreach ($departamentos as $departamento) {
+        // Recojo toda la query y escojo aquello que necesito
+        $selectDepartamentos[$departamento['nombre']] = $departamento['id'];
+    }
+    return $selectDepartamentos;
 }
 
 
