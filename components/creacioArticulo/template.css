@@ -2,6 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
+.errores {
+  color: red;
+}
+
 .creacioArticulo {
   background-color: #f2c025;
   margin: 0;
@@ -193,7 +199,11 @@ html {
   margin-bottom: 10px;
   background-color: #ffffff;
   border: 1px solid #cccccc;
+<<<<<<< HEAD
+  min-height: 200px;
+=======
   min-height: 5vw;
+>>>>>>> 63f42d0287c2cc5dfc49f99cc4c08a0fc19d202b
   color: #1e1f24;
   font-size: 18px;
   line-height: 22px;
@@ -235,7 +245,15 @@ html {
   0% {
     transform: translate(-100vw, 0vw);
   }
+<<<<<<< HEAD
+
   100% {
     transform: translate(0vw, 0vw);
   }
 }
+=======
+  100% {
+    transform: translate(0vw, 0vw);
+  }
+}
+>>>>>>> 63f42d0287c2cc5dfc49f99cc4c08a0fc19d202b

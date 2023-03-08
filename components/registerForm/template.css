@@ -1,0 +1,12 @@
+.registerForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+input{
+    border: 1px solid #ccc;
+    background-color: red;    
+}
