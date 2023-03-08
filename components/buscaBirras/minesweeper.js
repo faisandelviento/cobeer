@@ -1,13 +1,13 @@
 // Logic
 
 
-const TILE_STATUSES = {
+export let TILE_STATUSES = {
 	HIDDEN : 'hidden',
 	   MINE: 'mine',
 	 NUMBER: 'number',
 	 MARKED: 'marked'
 }
-
+// funcion  to make the game table with mines
 export function createBoard(boardSize,numberOfMines){
 	const board = [];
 	const minesPositions = getMimePositions(boardSize,numberOfMines);
@@ -39,7 +39,7 @@ export function createBoard(boardSize,numberOfMines){
 }
 
 
-// funcion para marcar las casillas
+// funcion to mark the tiles
 export function markTile(tile){
 	if(
 		tile.getStatus() !== TILE_STATUSES.HIDDEN  &&
@@ -51,7 +51,7 @@ export function markTile(tile){
 		? tile.setStatus(TILE_STATUSES.HIDDEN)
 		: tile.setStatus(TILE_STATUSES.MARKED);
 }
-// funcion para revelar las casillas
+// funcion to reveal the tiles
 export function revealTile(board,tile){
 	if(tile.getStatus() !== TILE_STATUSES.HIDDEN)return;
 	
@@ -95,10 +95,12 @@ function getMimePositions(boardSize,numberOfMines){
 	return positions;
 }
 
+// check if the positions are  equals
 function positionMatch(a,b){
 	return a.x === b.x && a.y === b.y;
 }
 
+// get all nearby tiles and return them
 function nearbyTiles(board,{x,y}){
 	const tiles = [];
 	for(let i=-1;i<=1;i++){
@@ -110,3 +112,29 @@ function nearbyTiles(board,{x,y}){
 	return tiles;
 }
 
+
+
+export function checkWin(board){
+	const markedTiles = board.reduce((result,row)=>{
+			row.filter((tile)=>{
+				if(tile.getStatus()==TILE_STATUSES.MARKED){
+					result.push(tile);
+				}
+			})
+		return result;
+	},[]);
+	const mines = board.reduce((result,row)=>{
+			row.filter((tile)=>{
+				if(tile.mine){
+					result.push(tile);
+				}
+			})
+		return result;
+	},[]);
+	console.log("MARKED TILES - ",markedTiles);
+	console.log("MINES - ",mines);
+	
+}
+export function checkLose(board){
+	return true
+}

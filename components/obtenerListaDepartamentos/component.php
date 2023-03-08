@@ -8,10 +8,11 @@ function getArticulos()
     // var_dump($departamentos);
     foreach ($departamentos as $departamento) {
         // Recojo toda la query y escojo aquello que necesito
-        $selectDepartamentos[$departamento['nombre']] = $departamento['idDep'];
+        $selectDepartamentos[$departamento['nombre']] = $departamento['id'];
     }
     // print_r($selectDepartamentos);
-    // var_dump($selectDepartamentos);
+    var_dump($selectDepartamentos);
+    echo(count($selectDepartamentos));
     // foreach($selectDepartamentos as $clave=>$valor){
     //     $nombreDep=$clave;
     //     $idDepartamento=$valor;
@@ -22,3 +23,4 @@ function getArticulos()
     // echo "La primera clave del array es: " . $firstKey;
 }
 getArticulos();
+?>
