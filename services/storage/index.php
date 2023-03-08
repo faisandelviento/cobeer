@@ -1,7 +1,7 @@
 <?php
-function storeFiles($file)
+function storeFiles($file, $idArticulo)
 {
-    $base_target_dir = dirname(__DIR__, 2) . "/DB/local/media/"; // specify the directory where the files should be stored
+    $target_dir = dirname(__DIR__, 2) . "/DB/local/media/" . $idArticulo . "/"; // specify the directory where the files should be stored
     $error = "";
     $paths = [];
     foreach ($file["tmp_name"] as $key => $tmp_name) {
@@ -9,7 +9,6 @@ function storeFiles($file)
         // Obtener la información del archivo
         $file_name = $file["name"][$key];
         $file_tmp = $file["tmp_name"][$key];
-        $target_dir = $base_target_dir . uniqid();
         $file_target = $target_dir . "/" . basename($file_name);
 
         // Check if image file is a actual image or fake image
