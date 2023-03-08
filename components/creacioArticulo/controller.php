@@ -40,7 +40,6 @@ if (isset($_POST['enviar'])) {
             );
 
             $recurso = $recursoDB->insert();
-            //indsert de los recursos
         }
 
     } catch (Exception $e) {
