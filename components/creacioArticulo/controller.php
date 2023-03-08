@@ -19,7 +19,7 @@ if (isset($_POST['enviar'])) {
                 "titulo" => $titulo,
                 "autor" => $autor,
                 "descripcion" => $descripcion,
-                "idDep" => $departamento,
+                "idDepartamento" => $departamento,
                 "texto" => $resumen,
                 "tags" => $tags
             )
@@ -27,7 +27,7 @@ if (isset($_POST['enviar'])) {
 
         $articulo = $articuloDB->insert();
 
-        $paths = storeFiles($_FILES["fileToUpload"], $articulo['idArt']);
+        $paths = storeFiles($_FILES["fileToUpload"], $articulo['id']);
         foreach ($paths as $path) {
             echo $path;
             //indsert de los recursos

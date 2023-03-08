@@ -38,7 +38,8 @@ function storeFiles($file, $idArticulo)
             throw new Exception($error);
         } else {
 
-            mkdir($target_dir);
+            if (!file_exists($target_dir))
+                mkdir($target_dir);
             file_put_contents($file_target, $file_tmp);
             array_push($paths, $file_target);
         }
