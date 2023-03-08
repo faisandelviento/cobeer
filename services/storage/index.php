@@ -1,17 +1,16 @@
 <?php
-function storeFile($file)
+function storeFiles($file)
 {
-    $target_dir = dirname(__DIR__, 2) . "/DB/local/media/"; // specify the directory where the files should be stored
-
-
+    $base_target_dir = dirname(__DIR__, 2) . "/DB/local/media/"; // specify the directory where the files should be stored
     $error = "";
-
+    $paths = [];
     foreach ($file["tmp_name"] as $key => $tmp_name) {
 
-        // Get the file name and path
+        // Obtener la información del archivo
         $file_name = $file["name"][$key];
         $file_tmp = $file["tmp_name"][$key];
-        $file_target = $target_dir . basename($file_name);
+        $target_dir = $base_target_dir . uniqid();
+        $file_target = $target_dir . "/" . basename($file_name);
 
         // Check if image file is a actual image or fake image
         $check = getimagesize($file_tmp);
@@ -38,12 +37,14 @@ function storeFile($file)
 
         if ($error != null) {
             throw new Exception($error);
-        }else{
+        } else {
+
+            mkdir($target_dir);
             file_put_contents($file_target, $file_tmp);
+            array_push($paths, $file_target);
         }
-
-
     }
+    return $paths;
 
 
 
