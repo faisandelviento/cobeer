@@ -27,11 +27,11 @@
             <br />
             <input list="departamentos" name="departamento" id="departamento">
             <datalist id="departamentos">
-                <option value="Departamento1">
-                <option value="Departamento2">
-                <option value="Departamento3">
-                <option value="Departamento4">
-                <option value="Departamento5">
+                <option value="1">Departamento1</option>
+                <option value="2">Departamento2</option>
+                <option value="3">Departamento3</option>
+                <option value="4">Departamento4</option>
+                <option value="5">Departamento5</option>
             </datalist>
             <div class="button">
                 <a href="#part2">TORNAR</a>
