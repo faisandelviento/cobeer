@@ -34,14 +34,15 @@ function storeFile($file)
         $extension = strtolower(pathinfo($file_target, PATHINFO_EXTENSION));
         if (!in_array($extension, $allowed_extensions)) {
             $error .= "- Ho sentim, només s'admeten fitxers JPG, JPEG, PNG i GIF. <br>";
-
-
-
         }
 
         if ($error != null) {
             throw new Exception($error);
+        }else{
+            file_put_contents($file_target, $file_tmp);
         }
+
+
     }
 
 
