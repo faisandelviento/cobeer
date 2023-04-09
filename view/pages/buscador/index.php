@@ -19,8 +19,8 @@
         </header>
 
         <main>
-            <?php include '../../../components/buscador/component.php' ?>
             <?php include '../../../components/articuloResultadBuscado/component.php' ?>
+            <?php include '../../../components/buscador/component.php' ?>
 
         </main>
 

@@ -165,12 +165,26 @@ h2 {
   font-size: medium;
 }
 
-.defaultCardImage {
+/* .defaultCardImage {
   background-image: url("https://picsum.photos/700/700");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  height: 300px;
+} */
+
+.defaultCardImage {
+  /* background-image: url("https://picsum.photos/700/700"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.defaultCardImage img{
+  width: 90%;
   height: 300px;
 }
 

@@ -11,7 +11,7 @@ class SimpleQuery {
         include("conexion.php");
         $this->dbh = $dbh;
     }
-    function list() {
+    function list($orderby) {
         $count = 0;
         $where = "";
         $query = "SELECT * FROM ".$this->tableName;
@@ -26,7 +26,34 @@ class SimpleQuery {
             $query .= " WHERE ";
             $query .= $where;
         }
+        $query .= " ORDER BY ";
+        $query .= $orderby;
+        $query .= " DESC";
         $query .= ";";
+        $result = $this->dbh->query($query);
+        $rows = [];
+        if (isset($result->num_rows)) {
+            while($row = $result->fetch_assoc()) {
+                array_push($rows, $row);
+            }
+        }
+        return $rows;
+    }
+    function listWith($filter) {
+        // $count = 0;
+        $where = $filter;
+        $query = "SELECT * FROM ".$this->tableName;
+        foreach($this->object as $key => $value) {
+            if($count > 0){
+                $where .= " AND ";
+            }
+            $where .= $key." = '".$value."'";
+            $count++;
+        }
+        $query .= " WHERE ";
+        $query .= $where;
+        $query .= ";";
+        // echo $query;
         $result = $this->dbh->query($query);
         $rows = [];
         if (isset($result->num_rows)) {
@@ -52,6 +79,7 @@ class SimpleQuery {
         $keys .= "`) ";
         $values .= "');";
         $query = $keys . $values;
+        // echo $query;
         $insert = $this->dbh->query($query);
         $this->object["id"] = $this->dbh->insert_id;
         return $this->object;
@@ -72,11 +100,32 @@ class SimpleQuery {
     }
 
     function delete() {
-
-
         $query = "DELETE FROM ".$this->tableName." WHERE id = ".$this->object['id'].";";
         $delete = $this->dbh->query($query);
-        
+    }
+    function search($tag){
+        $where = $tag;
+        $query = "SELECT * FROM ".$this->tableName;
+        foreach($this->object as $key => $value) {
+            if($count > 0){
+                $where .= " AND ";
+            }
+            $where .= $key." = '".$value."'";
+            $count++;
+        }
+        $query .= " WHERE MATCH(titulo,autor,texto,descripcion,tags) AGAINST(";
+        $query .= "'".$tag."'";
+        $query .= ")";
+        $query .= ";";
+        // echo $query;
+        $result = $this->dbh->query($query);
+        $rows = [];
+        if (isset($result->num_rows)) {
+            while($row = $result->fetch_assoc()) {
+                array_push($rows, $row);
+            }
+        }
+        return $rows;
     }
 }
 ?>

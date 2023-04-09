@@ -15,15 +15,14 @@ if (isset($_POST['enviar'])) {
         $resumen = $_POST['resumen'];
         $tags = $_POST['tag'];
 
-
-
         $articuloDB = new Articulo(
             array(
-                "titulo" => $titulo,
+                "titulo" => str_replace("'","\'",$titulo),
                 "autor" => $autor,
-                "descripcion" => $descripcion,
+                "descripcion" => str_replace("'","\'",$resumen),
                 "idDepartamento" => $departamento,
-                "texto" => $resumen,
+                "fechaCreacion" => date("Y-m-d")." ".date("H:m"),
+                "texto" => str_replace("'","\'",$descripcion),
                 "tags" => $tags
             )
         );
@@ -32,6 +31,7 @@ if (isset($_POST['enviar'])) {
 
         $paths = storeFiles($_FILES["fileToUpload"], $articulo['id']);
         foreach ($paths as $path) {
+            $path = str_replace("\\","/",$path);
             // echo $path;
             $recursoDB = new Recurso(
                 array(
@@ -39,7 +39,6 @@ if (isset($_POST['enviar'])) {
                     "idArticulo" => $articulo['id']
                 )
             );
-
             $recurso = $recursoDB->insert();
         }
 
@@ -63,7 +62,4 @@ function getArticulos():array
     }
     return $selectDepartamentos;
 }
-
-
-
 ?>

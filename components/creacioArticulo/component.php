@@ -11,7 +11,7 @@
     <h1>CREACIÓ D'ARTICLES</h1>
     <form action="#" method="post" id="form" enctype="multipart/form-data">
         <div id="part1" class="part-form-top">
-            <label for="titulo">Introduïu el títol de l'Articulo: </label> <br />
+            <label for="titulo">Introduïu el títol de l'article: </label> <br />
             <input type="text" name="name" id="name" class="name" required />
             <div class="button" onclick="animation()">
                 <a href="#part2">SEGÜENT</a>
@@ -49,10 +49,10 @@
             </div>
         </div>
         <div id="part5" class="part-form reveal">
-            <label for="resumen">Introduïu un resumen: </label> <br />
+            <label for="resumen">Introduïu un resum: </label> <br />
             <textarea name="resumen" id="resumen" maxlength="150"></textarea>
             <div>
-                <h6>*No es obligatorio</h6>
+                <!-- <h6>*No es obligatori</h6> -->
             </div>
             <div class="button">
                 <a href="#part4">TORNAR</a>

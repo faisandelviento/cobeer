@@ -2,23 +2,28 @@
     <?php include __DIR__ . '/template.css';
     ?>
 </style>
-<?php include __DIR__ . '/controller.php'; ?>
+<?php include_once __DIR__ . '/controller.php'; ?>
 
 <div class="defaultCardContainer">
-    <div class="defaultCardImage">
-    </div>
-
-    <div class="defaultCardText">
-        <div class="defaultCardTitle">
-            <h1>
-                <?= $articulo['titulo']; ?>
-
-            </h1>
+    <?php $articleUrl = "/cobeer/view/pages/articuloDepartamento?articleId=".$articulo['id']; ?>
+    <a href=<?= $articleUrl; ?>>
+        <div class="defaultCardImage">
+            <img src=<?= getFirstImage($articulo['id']); ?>  alt="">
         </div>
-        <div class="defaultCardDescription">
-            <p>
-                <?= $articulo['descripcion']; ?>
-            </p>
+
+        <div class="defaultCardText">
+            <div class="defaultCardTitle">
+                <h1>
+                    <?= $articulo['titulo']; ?>
+
+                </h1>
+            </div>
+            <div class="defaultCardDescription">
+                <p>
+                    <?= $articulo['descripcion']; ?>
+                </p>
+            </div>
         </div>
-    </div>
+    </a>
+    
 </div>

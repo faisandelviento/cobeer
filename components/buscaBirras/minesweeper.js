@@ -11,7 +11,7 @@ export let TILE_STATUSES = {
 export function createBoard(boardSize,numberOfMines){
 	const board = [];
 	const minesPositions = getMimePositions(boardSize,numberOfMines);
-	console.log(minesPositions)
+	// console.log(minesPositions)
 	for(let i=0;i<boardSize;i++){
 		const row = [];
 		for(let e=0;e<boardSize;e++){
@@ -131,8 +131,8 @@ export function checkWin(board){
 			})
 		return result;
 	},[]);
-	console.log("MARKED TILES - ",markedTiles);
-	console.log("MINES - ",mines);
+	// console.log("MARKED TILES - ",markedTiles);
+	// console.log("MINES - ",mines);
 	
 }
 export function checkLose(board){

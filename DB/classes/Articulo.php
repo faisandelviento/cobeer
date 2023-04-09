@@ -8,16 +8,14 @@ class Articulo
     {
         $this->SimpleQuery = new SimpleQuery($articulo, "articulo");
     }
-
     function list()
     {
-        return $this->SimpleQuery->list();
+        return $this->SimpleQuery->list("fechaCreacion");
     }
-
-    // function listWith()
-    // {
-    //     return $this->SimpleQuery->list();
-    // }
+    function listWith($id)
+    {
+        return $this->SimpleQuery->listWith("id=".$id);
+    }
     function insert()
     {
         return $this->SimpleQuery->insert();
@@ -29,6 +27,10 @@ class Articulo
     function delete()
     {
         return $this->SimpleQuery->delete();
+    }
+    function search($tag)
+    {
+        return $this->SimpleQuery->search($tag);
     }
 }
 ?>

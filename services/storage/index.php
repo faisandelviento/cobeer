@@ -10,6 +10,7 @@ function storeFiles($file, $idArticulo)
         $file_name = $file["name"][$key];
         $file_tmp = $file["tmp_name"][$key];
         $file_target = $target_dir . basename($file_name);
+        $resource_target = "/cobeer/DB/local/media/" . $idArticulo . "/" . basename($file_name);
 
         // Check if image file is a actual image or fake image
         $check = getimagesize($file_tmp);
@@ -40,12 +41,10 @@ function storeFiles($file, $idArticulo)
 
             if (!file_exists($target_dir))
                 mkdir($target_dir);
-            file_put_contents($file_target, $file_tmp);
-            array_push($paths, $file_target);
+            $savePicStatus = file_put_contents($file_target, file_get_contents($file_tmp));
+            // array_push($paths, $file_target);
+            array_push($paths, $resource_target);
         }
     }
     return $paths;
-
-
-
 } ?>

@@ -11,13 +11,13 @@ class Recurso
 
     function list()
     {
-        return $this->SimpleQuery->list();
+        return $this->SimpleQuery->list("id");
     }
 
-    // function listWith()
-    // {
-    //     return $this->SimpleQuery->list();
-    // }
+    function listWith($id)
+    {
+        return $this->SimpleQuery->listWith("idArticulo=".$id);
+    }
     function insert()
     {
         return $this->SimpleQuery->insert();

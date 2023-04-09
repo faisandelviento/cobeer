@@ -11,7 +11,7 @@ class Departamentos
 
     function list()
     {
-        return $this->SimpleQuery->list();
+        return $this->SimpleQuery->list("id");
     }
     function insert()
     {
