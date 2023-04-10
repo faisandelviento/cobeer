@@ -8,10 +8,13 @@ class Departamentos
     {
         $this->SimpleQuery = new SimpleQuery($departamento, "departamento");
     }
-
     function list()
     {
         return $this->SimpleQuery->list("id");
+    }
+    function listWith($id)
+    {
+        return $this->SimpleQuery->listWith("id=".$id);
     }
     function insert()
     {

@@ -13,6 +13,7 @@ function storeFiles($file, $idArticulo)
         $resource_target = "/cobeer/DB/local/media/" . $idArticulo . "/" . basename($file_name);
 
         // Check if image file is a actual image or fake image
+        if($file_tmp == ""){break; }
         $check = getimagesize($file_tmp);
         if ($check === false) {
             $error .= "- Fitxer : El fitxer no és una imatge. <br>";

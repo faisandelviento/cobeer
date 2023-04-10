@@ -78,7 +78,7 @@
     display: flex;
     padding-top: 40px;
     justify-content: center;
-    height: 100vh;
+    height: auto;
     min-height: 40em;
   }
 }
@@ -134,7 +134,8 @@
   /* display: flex; */
   flex-direction: column;
   justify-content: space-between;
-  overflow-y: auto;
+  overflow-y: none;
+  height: auto;
 }
 
 .post__category {
@@ -143,7 +144,8 @@
   font-size: 0.9em;
   text-transform: uppercase;
   letter-spacing: 0.3em;
-  overflow: auto;
+  overflow: none;
+  height: auto;
 }
 
 .post__category:before {

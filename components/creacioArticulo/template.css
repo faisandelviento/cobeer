@@ -2,8 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 .errores {
   color: red;
 }
@@ -129,7 +127,7 @@ html {
   color: #fff;
 }
 
-.part-form input {
+.part-form input, .part-form select {
   width: 60%;
   height: 40px;
   border-style: none none solid;
@@ -140,6 +138,11 @@ html {
   font-size: 1.4em;
   line-height: 28px;
 }
+
+.part-form select option{
+  color: black;
+}
+
 
 /****** GRUPO DE BOTONES ******/
 .part-form .button {

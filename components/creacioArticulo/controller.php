@@ -11,7 +11,7 @@ if (isset($_POST['enviar'])) {
         $autor = $_POST['autor'];
         $departamento = $_POST['departamento'];
         $descripcion = $_POST['descripcion'];
-        $departamento = 1;
+        // $departamento = 1;
         $resumen = $_POST['resumen'];
         $tags = $_POST['tag'];
 
@@ -51,7 +51,7 @@ if (isset($_POST['enviar'])) {
 
 }
 
-function getArticulos():array
+function getDepartamentos():array
 {
     $departamentosDB = new Departamentos();
     $departamentos = $departamentosDB->list();
@@ -60,6 +60,7 @@ function getArticulos():array
         // Recojo toda la query y escojo aquello que necesito
         $selectDepartamentos[$departamento['nombre']] = $departamento['id'];
     }
+    echo $selectDepartamentos;
     return $selectDepartamentos;
 }
 ?>

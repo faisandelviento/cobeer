@@ -22,7 +22,7 @@
 		<area target="" alt="step6" title="step6" href="../buscador/?tag=refredament" coords="396,303,398,267,407,257,430,269,431,313,421,317" shape="poly">
 		<area target="" alt="step7" title="step7" href="../buscador/?tag=fermentació" coords="357,423,357,360,372,346,386,346,397,354,399,397,399,415,394,421,386,429" shape="poly">
 		<area target="" alt="step8" title="step8" href="../buscador/?tag=filtratge" coords="474,375,473,341,497,331,500,304,509,298,510,313,510,325,526,339,534,350,536,370,530,379,508,390,491,385" shape="poly">
-		<area target="" alt="step9" title="step9" href="../buscador/?tag=envsament" coords="533,469,537,428,538,406,545,391,557,392,570,397,572,408,592,409,599,415,599,435,599,464,598,473,589,482,579,489,565,481,544,485" shape="poly">
+		<area target="" alt="step9" title="step9" href="../buscador/?tag=envasament" coords="533,469,537,428,538,406,545,391,557,392,570,397,572,408,592,409,599,415,599,435,599,464,598,473,589,482,579,489,565,481,544,485" shape="poly">
 		<area target="" alt="step10" title="step10" href="../buscador/?tag=consum" coords="645,353,648,325,654,306,654,281,666,278,666,298,673,314,673,334,673,365,661,370,652,366" shape="poly">
     </map>
 

@@ -4,6 +4,7 @@
 
 <?php include __DIR__ . '/controller.php'; 
   $articulo = getArticulo($_GET["articleId"]);
+  $departamento = getDepartamento($articulo["idDepartamento"])[0];
 ?>
 
 <article class="post">
@@ -27,7 +28,9 @@
   </section>
 
   <div class="post__container">
-    <span class="post__category">Departamento</span>
+    <span class="post__category">
+      <?= $departamento["nombre"]; ?>
+    </span>
 
     <div class="post__content">
       <header>

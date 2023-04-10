@@ -1,14 +1,14 @@
 <?php include __DIR__ . '/controller.php'; ?>
 <style>
     <?php include __DIR__ . '/template.css';
-    ?>
+?>
 </style>
 
 <div class="creacioArticulo">
     <h3 class="errores">
         <?= $errores ?? null ?>
     </h3>
-    <h1>CREACIÓ D'ARTICLES</h1>
+    <h1>PUBLICA UN NOU ARTICLE</h1>
     <form action="#" method="post" id="form" enctype="multipart/form-data">
         <div id="part1" class="part-form-top">
             <label for="titulo">Introduïu el títol de l'article: </label> <br />
@@ -28,12 +28,13 @@
         <div id="part3" class="part-form reveal">
             <label for="descripcion">Escolliu el departament:</label>
             <br />
-            <input list="departamentos" name="departamento" id="departamento">
-            <datalist id="departamentos">                
-                <?php foreach(getArticulos() as $departamento => $idDepartamento):?>
-                    <option id="<?=$idDepartamento?>"><?=$departamento?></option>
+            <select name="departamento" id="departamento">
+                <?php foreach(getDepartamentos() as $departamento => $idDepartamento):?>
+                    <option id="<?=$idDepartamento?>" value="<?=$idDepartamento?>">
+                        <?=$departamento?>
+                    </option>
                 <?php endforeach;?>
-            </datalist>            
+            </select>
             <div class="button">
                 <a href="#part2">TORNAR</a>
                 <a href="#part4">SEGÜENT</a>
