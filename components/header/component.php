@@ -5,7 +5,7 @@
 
 <div class="headerContainer">
     <a class="cobeerLogo" href="../../../view/pages/home/">
-        <img src="http://localhost/cobeer/assets/logo/cobeerLogo.png"
+        <img src="../../../assets/logo/cobeerLogo.png"
          alt="Cobeer Logo" />
     </a>
 </div>
