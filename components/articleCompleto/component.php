@@ -18,7 +18,7 @@
           $imagenes = getImagenes($_GET["articleId"]);
           foreach ($imagenes as $imagen) {
             $img_url = $imagen["url"];
-            echo "<li><img src=".$img_url."></li>";
+            echo "<li><img src="."../../..".$img_url."></li>";
           }
         ?>
       </ul>

@@ -8,7 +8,8 @@
     <?php $articleUrl = "../../../view/pages/articuloDepartamento?articleId=".$articulo['id']; ?>
     <a href=<?= $articleUrl; ?>>
         <div class="defaultCardImage">
-            <img src=<?= getFirstImage($articulo['id']); ?>  alt="">
+            <!-- <img src=<?= getFirstImage($articulo['id']); ?>  alt=""> -->
+            <img src=<?= "../../..".getFirstImage($articulo['id']); ?>  alt="">
         </div>
 
         <div class="defaultCardText">
