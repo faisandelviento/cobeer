@@ -44,7 +44,7 @@ CREATE TABLE `articulo` (
   KEY `pk_articulos_departamentos` (`idDepartamento`),
   FULLTEXT KEY `search_idx` (`titulo`,`autor`,`texto`,`descripcion`,`tags`),
   CONSTRAINT `pk_articulos_departamentos` FOREIGN KEY (`idDepartamento`) REFERENCES `departamento` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -105,7 +105,7 @@ CREATE TABLE `recurso` (
   PRIMARY KEY (`id`),
   KEY `pk_recursos_articulos` (`idArticulo`),
   CONSTRAINT `pk_recursos_articulos` FOREIGN KEY (`idArticulo`) REFERENCES `articulo` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -114,12 +114,12 @@ CREATE TABLE `recurso` (
 
 LOCK TABLES `recurso` WRITE;
 /*!40000 ALTER TABLE `recurso` DISABLE KEYS */;
-INSERT INTO `recurso` VALUES (1,'/cobeer/DB/local/media/30/cerveza-casera-3.jpg',30,_binary '\0');
-INSERT INTO `recurso` VALUES (2,'/cobeer/DB/local/media/31/cerveza-SF-1.jpg',31,_binary '\0');
-INSERT INTO `recurso` VALUES (3,'/cobeer/DB/local/media/32/ferm1.jpg',32,_binary '\0');
-INSERT INTO `recurso` VALUES (4,'/cobeer/DB/local/media/32/ferm2.jpg',32,_binary '\0');
-INSERT INTO `recurso` VALUES (5,'/cobeer/DB/local/media/33/llupol.jpg',33,_binary '\0');
-INSERT INTO `recurso` VALUES (6,'/cobeer/DB/local/media/45/01.jpg',45,_binary '\0');
+INSERT INTO `recurso` VALUES (1,'/DB/local/media/30/cerveza-casera-3.jpg',30,_binary '\0');
+INSERT INTO `recurso` VALUES (2,'/DB/local/media/31/cerveza-SF-1.jpg',31,_binary '\0');
+INSERT INTO `recurso` VALUES (3,'/DB/local/media/32/ferm1.jpg',32,_binary '\0');
+INSERT INTO `recurso` VALUES (4,'/DB/local/media/32/ferm2.jpg',32,_binary '\0');
+INSERT INTO `recurso` VALUES (5,'/DB/local/media/33/llupol.jpg',33,_binary '\0');
+INSERT INTO `recurso` VALUES (6,'/DB/local/media/45/01.jpg',45,_binary '\0');
 /*!40000 ALTER TABLE `recurso` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -162,4 +162,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-10  9:20:09
+-- Dump completed on 2023-04-10 12:03:16
