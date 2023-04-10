@@ -5,7 +5,7 @@
 <?php include_once __DIR__ . '/controller.php'; ?>
 
 <div class="defaultCardContainer">
-    <?php $articleUrl = "/cobeer/view/pages/articuloDepartamento?articleId=".$articulo['id']; ?>
+    <?php $articleUrl = "../../../view/pages/articuloDepartamento?articleId=".$articulo['id']; ?>
     <a href=<?= $articleUrl; ?>>
         <div class="defaultCardImage">
             <img src=<?= getFirstImage($articulo['id']); ?>  alt="">

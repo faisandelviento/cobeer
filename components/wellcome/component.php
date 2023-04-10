@@ -27,7 +27,7 @@
         </h1>
         <!-- Componente buscador -->
         <div class="buscadorCobeer">
-            <?php include dirname(__DIR__, 1) . '\buscador\component.php' ?>
+            <?php include dirname(__DIR__, 1) . '/buscador/component.php' ?>
         </div>
         <h2>
             Busca per departament, per data o per paraula clau!

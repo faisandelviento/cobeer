@@ -4,7 +4,7 @@
 
 <div class="departamento">
         <div class='artDestacados'>
-            <?php include '..\..\components\articlesCard\component.php' ?>
+            <?php include '../../components/articlesCard/component.php' ?>
             <button>Añadir</button>
             <button>Editar</button>
         </div>
