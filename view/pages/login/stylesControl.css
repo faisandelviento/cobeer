@@ -1,11 +1,10 @@
-.login {
+/* .login {
     margin-top: 3vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 40%;
     color: black;
-
 }
 
 .login h1 {
@@ -30,6 +29,6 @@
 }
 
 .login button:hover {
-    /* font-size:20px */
+    font-size:20px;
     width: 20%;
-}
+} */

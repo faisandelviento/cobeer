@@ -4,13 +4,13 @@
 </style>
 
 <div class="headerContainer">
-    <a class="cobeerLogo" href="http://localhost/cobeer/view/pages/home/">
-        <img src="http://localhost/cobeer/assets/logo/cobeerLogo.png"
+    <a class="cobeerLogo" href="../../../view/pages/home/">
+        <img src="../../../assets/logo/cobeerLogo.png"
          alt="Cobeer Logo" />
     </a>
 </div>
 <div>
-    <?php include dirname(__DIR__, 1) . '\nav\component.php' ?>
+    <?php include dirname(__DIR__, 1) . '/nav/component.php' ?>
 </div>
 
 <div class="watermark1">En construcció...</div>

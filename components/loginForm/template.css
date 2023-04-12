@@ -1,40 +1,115 @@
-#enviar{
-    display: block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid #ffa74c;
-    background-color:#ffa74c;
-}
-#contraseña{
-    color: blue;;
-}
-
-
-.loginForm{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.main{
+	position: relative;
+	width: 350px;
+	height: 500px;
+	overflow: hidden;
+	border-radius: 10px;
+    margin:auto;
+	background: transparent;
+	background-color: #C79D1E;
 }
 
-.loginFormContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+#chk{
+	display: none;
+}
+.signup{
+	position: relative;
+	width:100%;
+	height: 100%;
+	background-color: white;
 }
 
-.loginFormInputs{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-.loginFormInput{
-    border-radius: 2px;
-    border: 2px #ccc solid;
-    background-color:#FFFAF1;
+.label-login{
+	color: #fff;
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
 }
+
+.input-login{
+	width: 60%;
+	height: 40px;
+	background: #fff;
+	justify-content: center;
+	display: flex;
+	margin: 5px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
+.button-login{
+	width: 60%;
+	height: 20px;
+	background: #fff;
+	justify-content: center;
+	display: flex;
+	margin: 5px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
+.button-login {
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #ffa74c;
+	background: #fff;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+
+.button-login:hover{
+	color: #C79D1E;
+	background: #F2C025;
+}
+
+.login{
+	height: 460px;
+	background: #eee;
+	border-radius: 60% / 10%;
+	transform: translateY(-50px);
+	transition: .8s ease-in-out;
+	background: #F2C025;
+}
+
+.login:hover{
+	background-color: #C79D1E;
+}
+
+.login .label-login{
+	color: rgb(0, 0, 0);
+	transform: scale(.6);
+    margin-bottom: 10px;
+}
+
+#chk:checked ~ .login{
+	transform: translateY(-350px);
+}
+#chk:checked ~ .login .label-login{
+	transform: scale(1);	
+}
+#chk:checked ~ .signup .label-login{
+	transform: scale(.6);
+}
+

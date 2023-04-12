@@ -1,0 +1,17 @@
+.articlesCardContainer{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.tituloArtDest{
+    margin-top: 10vh;
+    text-align: center;
+    background-color: #C79D1E;
+    padding: 2vh;
+}

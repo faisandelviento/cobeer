@@ -10,10 +10,10 @@ function preview(){
 	let item = this;
 	let preview = window.document.querySelectorAll(".preview")[0];
 	// display preview
-	console.log(preview.style.display);
+	// console.log(preview.style.display);
 
 	let previewMain = window.document.querySelectorAll(".preview")[0].querySelectorAll(".main")[0];
-	console.log(previewMain)
+	// console.log(previewMain)
 		if(item.name==="titulo"){
 			// crete a div > h1 to append in preview
 			let div = window.document.createElement("div");

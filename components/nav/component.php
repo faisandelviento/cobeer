@@ -6,7 +6,7 @@
   <span class="menu"> <span class="hamburger"></span> </span>
   <ul>
     <li>
-      <a href="/cobeer/view/pages/home" class="btn">
+      <a href="../../../view/pages/home" class="btn">
         <svg width="277" height="62">
           <defs>
             <linearGradient id="grad1">
@@ -21,7 +21,7 @@
       </a>
     </li>
     <li>
-      <a href="/cobeer/view/pages/login" class="btn">
+      <a href="../../../view/pages/crearArticulo/" class="btn">
         <svg width="277" height="62">
           <defs>
             <linearGradient id="grad1">
@@ -32,7 +32,7 @@
           <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
         </svg>
         <!--<span>Voir mes réalisations</span>-->
-        <span>Login</span>
+        <span>Crear Article</span>
       </a>
     </li>
     <div class="dropDownDept">
@@ -53,9 +53,9 @@
       </a>
     </li>
     <div class="subMenu">
-      <li><a href="/cobeer/view/pages/departaments">Daw</a></li>
-      <li><a href="/cobeer/view/pages/departaments">Cai</a></li>
-      <li><a href="/cobeer/view/pages/departaments">Dietetica</a></li>
+      <li><a href="">Daw</a></li>
+      <li><a href="">Cai</a></li>
+      <li><a href="">Dietetica</a></li>
 
     </div>
     </div>
