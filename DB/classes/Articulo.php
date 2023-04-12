@@ -12,6 +12,10 @@ class Articulo
     {
         return $this->SimpleQuery->list("fechaCreacion");
     }
+    function listLast10()
+    {
+        return $this->SimpleQuery->listLast10();
+    }
     function listWith($id)
     {
         return $this->SimpleQuery->listWith("id=".$id);

@@ -5,7 +5,7 @@
 <?php include __DIR__ . '/controller.php'; ?>
 
 <div class="tituloArtDest">
-    <h1>Articles destacats</h1>
+    <h1>Darrers articles publicats</h1>
 </div>
 <div class="articlesCardContainer">
     <?php getArticulos() ?>
