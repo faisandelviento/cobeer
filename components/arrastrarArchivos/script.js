@@ -16,33 +16,35 @@ input.addEventListener("change", (e) => {
   // Cada vez que cambie de archivo cambiara el color, que especifique en el css (line 25). ClassList permite acceder al css.
   areaArrastre.classList.add("active");
   showFiles(files);
+  
   areaArrastre.classList.remove("active");
 });
 
 // arrastrar y soltar
 // Elementos que arrastramos se activa este
-areaArrastre.addEventListener("dragover", (e) => {
-  // Evita que abra la imagen, desactiva el modo predeterminado, es decir que cuando arrastre la imagen, si suelto la
-  // imagen no me abrira esta misma en otra ventana diferente.
-  e.preventDefault();
-  areaArrastre.classList.add("active");
-  h2Arrastre.textContent = "SUELTA PARA SUBIR IMAGENES";
-});
+// areaArrastre.addEventListener("dragover", (e) => {
+//   // Evita que abra la imagen, desactiva el modo predeterminado, es decir que cuando arrastre la imagen, si suelto la
+//   // imagen no me abrira esta misma en otra ventana diferente.
+//   e.preventDefault();
+//   areaArrastre.classList.add("active");
+//   h2Arrastre.textContent = "SUELTA PARA SUBIR IMAGENES";
+// });
 // Elementos arrastras que no esta dentro del elemento
-areaArrastre.addEventListener("dragleave", (e) => {
-  e.preventDefault();
-  areaArrastre.classList.remove("active");
-  h2Arrastre.textContent = "Selecciona tus archivos";
-});
+// areaArrastre.addEventListener("dragleave", (e) => {
+//   e.preventDefault();
+//   areaArrastre.classList.remove("active");
+//   h2Arrastre.textContent = "Selecciona tus archivos";
+// });
 // Al soltar el archivo dentro del elemento (zona)
-areaArrastre.addEventListener("drop", (e) => {
-  e.preventDefault();
-  // Obtiene referencia de las imagenes
-  files = e.dataTransfer.files;
-  showFiles(files);
-  areaArrastre.classList.remove("active");
-  h2Arrastre.textContent = "Selecciona tus archivos";
-});
+// areaArrastre.addEventListener("drop", (e) => {
+//   e.preventDefault();
+//   // Obtiene referencia de las imagenes
+//   files = e.dataTransfer.files;
+//   showFiles(files);
+//   areaArrastre.classList.remove("active");
+//   h2Arrastre.textContent = "Selecciona tus archivos";
+//   }
+// });
 
 // Con esta funcion averiguo si solo subo una imagen o varias
 function showFiles(files) {
