@@ -1,8 +1,10 @@
+<?php include __DIR__ . '/controller.php'; ?>
+
 <style>
   <?php include __DIR__ . '/template.css'; ?>
 </style>
 
-<?php include __DIR__ . '/controller.php'; 
+<?php 
   $articulo = getArticulo($_GET["articleId"]);
   $departamento = getDepartamento($articulo["idDepartamento"])[0];
 ?>
@@ -62,7 +64,15 @@
     </div>
   </div>
 </article>
-
+<div id="deleteModal">
+        <h3>Segur que vols esborrar l'article?</h3>
+        <p>Si es així, introdueix la paraula clau:</p>
+        <form action="../home/index.php" method="POST">
+          <input type="text" name="clau" autocomplete="off">
+          <input type="submit" value="ESBORRA" name="enviar">
+          <input type="text" value="<?php echo $_GET["articleId"] ?>" hidden name="id">
+        </form>
+  </div>
 <script>
       /* etiqueta las imágenes pra poder rastrearlas, solo por conveniencia */
       let i = 1;
@@ -96,4 +106,13 @@
       position = Math.max(position, -width * (listElems.length - count));
       list.style.marginLeft = position + 'px';
     };
+
+    window.onload = function(){
+      let deleteButton = document.getElementsByClassName('avatar')[0];
+      deleteButton.addEventListener('click',deleteArticle);
+    }
+
+    function deleteArticle(){
+      document.getElementById("deleteModal").style.display="block";
+    }
 </script>

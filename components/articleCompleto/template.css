@@ -300,8 +300,23 @@
   width: 2em;
   height: 2em;
   border-radius: 50%;
-  background: url("https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHByb2ZpbGV8ZW58MHx8MHx8&w=1000&q=80");
+  background: url("../../../assets/imagenes/delete.png");
   background-size: cover;
+  cursor: pointer;
+}
+
+/* Delete modal styles */
+#deleteModal{
+  width: 40vw;
+  height: 30vh;
+  background-color: white;
+  position: fixed;
+  z-index: 999;
+  top: 30vh;
+  left: 30vw;
+  padding: 3%;
+  text-align: center;
+  display: none;
 }
 
 /* Carrousel styles */

@@ -16,7 +16,7 @@ class Recurso
 
     function listWith($id)
     {
-        return $this->SimpleQuery->listWith("idArticulo=".$id);
+        return $this->SimpleQuery->listWith("idArticulo= ".$id);
     }
     function insert()
     {
@@ -26,9 +26,9 @@ class Recurso
     {
         return $this->SimpleQuery->update();
     }
-    function delete()
+    function delete($id)
     {
-        return $this->SimpleQuery->delete();
+        return $this->SimpleQuery->delete("idArticulo =".$id);
     }
 }
 ?>

@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . '/../../DB/classes/Recurso.php';
+include_once __DIR__ . '/../../DB/classes/Recurso.php';
 
 function getFirstImage($articleId)
 {

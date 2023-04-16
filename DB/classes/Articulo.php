@@ -28,9 +28,9 @@ class Articulo
     {
         return $this->SimpleQuery->update();
     }
-    function delete()
+    function delete($id)
     {
-        return $this->SimpleQuery->delete();
+        return $this->SimpleQuery->delete("id= ".$id);
     }
     function search($tag)
     {

@@ -128,8 +128,9 @@ class SimpleQuery {
         $update = $this->dbh->query($query);
     }
 
-    function delete() {
-        $query = "DELETE FROM ".$this->tableName." WHERE id = ".$this->object['id'].";";
+    function delete($filter) {
+        $query = "DELETE FROM ".$this->tableName." WHERE ".$filter.";";
+        // echo $query;
         $delete = $this->dbh->query($query);
     }
     function search($tag){
