@@ -14,8 +14,14 @@
 <body>
     <?php
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            include __DIR__ . '/controller.php';
-            borrarArticle();
+            if (isset($_POST['esborrar'])){
+                include __DIR__ . '/controller.php';
+                borrarArticle();
+            }
+            if (isset($_POST['editar'])){
+                include __DIR__ . '/controller.php';
+                editarArticle();
+            }
         }
     ?>
     <div class="layout">

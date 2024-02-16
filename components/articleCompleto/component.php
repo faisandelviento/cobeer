@@ -10,7 +10,6 @@
 ?>
 
 <article class="post">
-
   <section class="awSlider">
   <div id="carousel" class="carousel">
     <button class="arrow prev">⇦</button>
@@ -55,6 +54,7 @@
       <div class="user flex p-1">
 
         <div class="avatar"></div>
+        <div class="avatarEdit"></div> <!-- al pinchar el div abre ventana(id=editModal) para poder editar articulo-->
         <div class="user-detail">
           <h2 class="name">
           <?= $articulo["autor"]; ?>
@@ -64,12 +64,30 @@
     </div>
   </div>
 </article>
+<div id= "editModal">
+  <h3>Editar article</h3>
+  <form action="#" method="POST">
+    <label>Titulo</label>
+    <input type='text' name='titulo' value='<?= $articulo["titulo"]; ?>'>
+    <label>Autor</label>
+    <input type='text' name='autor' value='<?= $articulo["autor"]; ?>'>
+
+    <br>
+    <label>articulo</label>
+    <textarea name="comentarios" rows="10" cols="90"><?= $articulo["texto"]; ?></textarea>
+    <br>
+    <input type="submit" value="EDITAR" name="editar">
+    <input type='hidden' name='titulModi' >
+    <input type="hidden" value="<?php echo $_GET["articleId"] ?>" hidden name="id">
+  </form>
+</div>
+
 <div id="deleteModal">
         <h3>Segur que vols esborrar l'article?</h3>
         <p>Si es així, introdueix la paraula clau:</p>
         <form action="../home/index.php" method="POST">
           <input type="text" name="clau" autocomplete="off">
-          <input type="submit" value="ESBORRA" name="enviar">
+          <input type="submit" value="ESBORRA" name="esborrar">
           <input type="text" value="<?php echo $_GET["articleId"] ?>" hidden name="id">
         </form>
   </div>
@@ -110,6 +128,13 @@
     window.onload = function(){
       let deleteButton = document.getElementsByClassName('avatar')[0];
       deleteButton.addEventListener('click',deleteArticle);
+
+      let  editButton = document.getElementsByClassName('avatarEdit')[0];
+      editButton.addEventListener('click',showEdit);
+    }
+    function showEdit(){
+      console.log("entro en la funcion");
+      document.getElementById("editModal").style.display="block";
     }
 
     function deleteArticle(){

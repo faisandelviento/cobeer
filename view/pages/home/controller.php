@@ -21,4 +21,12 @@ function borrarArticle(){
       $errores = "Hay que revisar esos puntos : <br> " . $e->getMessage();
     }
 }
+
+function editarArticle(){
+  try{
+    $idArticulo = $_POST['id'];
+    // if(){}
+  }
+
+}
 ?>
